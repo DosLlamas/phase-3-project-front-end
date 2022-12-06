@@ -2,29 +2,35 @@ import React, {useState, useEffect} from 'react'
 import AddArtist from "./components/AddArtist"
 import SearchBar from "./components/SearchBar"
 import ArtistPage from "./components/ArtistPage"
+import Header from "./components/Header"
 
 import './App.css';
 
 function App() {
-// console.log("working?")
+
   const [artistData, setArtistData] = useState([])
   
   useEffect(() => {
     fetch('http://localhost:9292/')
     .then(r => r.json())
-    .then(data => console.log("Fetch:", data))
+    .then(data => console.log(data))
   }, [])
-  
 
-  const [searchArtist, setSearchArtist] = useState("")
 
-  // const filteredArtists = artistData.filter(artistObj => {
-  //   return (artistObj).toLowerCase().includes(searchArtist.toLowerCase())
+ 
+  // const [searchArtist, setSearchArtist] = useState("")
+  // console.log(artistData)
+  // const filteredArtists = artistData.filter((artistObj) => {
+    
+  //   return (artistObj.name.toLowerCase().includes(searchArtist.toLowerCase()))
+    
   // })
   // selectedArtist = {filteredArtists}
+  // searchArtist = {searchArtist} setSearchArtist = {setSearchArtist}
   return (
     <div className="App">
-      <SearchBar searchArtist = {searchArtist} setSearchArtist = {setSearchArtist}/>
+      <Header />
+      <SearchBar />
       <ArtistPage />
       <AddArtist />
     </div>
