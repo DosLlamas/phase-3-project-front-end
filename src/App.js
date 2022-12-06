@@ -10,7 +10,7 @@ function App() {
   const [artistData, setArtistData] = useState([])
   
   useEffect(() => {
-    fetch('http://localhost:9292/working')
+    fetch('http://localhost:9292/')
     .then(r => r.json())
     .then(data => console.log("Fetch:", data))
   }, [])
