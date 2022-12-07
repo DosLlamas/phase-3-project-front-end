@@ -1,10 +1,13 @@
 
-function SearchBar(){
+import React from 'react';
+
+function SearchBar({searchArtist, setSearchArtist}){
+  
 
 
-  // const handleText = (e) => {
-  //   setSearchArtist(e.target.value)
-  // }
+  const handleText = (e) => {
+    setSearchArtist(e.target.value)
+  }
 
     
     return (
@@ -15,8 +18,8 @@ function SearchBar(){
         <input
           type="text"
           placeholder="Who do you want to listen to?"
-          // value=
-          // onChange={handleText}
+          value= {searchArtist}
+          onChange={handleText}
         />
         </div>
         
