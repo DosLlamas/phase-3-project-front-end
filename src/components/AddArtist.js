@@ -11,15 +11,15 @@ function AddArtist({artistData, setArtistData}){
       se.preventDefault()
 
       let newAlbum={
-         album: albumInput,
+         album_name: albumInput,
          artist_name: artistNameInput,
          release_year: yearReleaseInput,
          album_cover: albumCoverImageInput
       }
    
-fetch('http://localhost:9292/albums',{
+fetch('http://localhost:9292/newalbums',{
    method: 'POST',
-   headers: {'content-type': 'application/json'},
+   headers: {'Content-Type': 'application/json'},
    body:JSON.stringify(newAlbum)
    })
    .then(res => res.json())
