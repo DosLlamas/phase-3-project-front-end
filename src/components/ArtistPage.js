@@ -2,11 +2,11 @@ import React from 'react';
 import ArtistCard from './ArtistCard';
 
 
-function ArtistPage({selectedArtist}){
+function ArtistPage({selectedArtist, deleteAlbum}){
     // console.log(selectedArtist);
     const artistList = selectedArtist.map((artistObj) => {
         return(
-            <ArtistCard key={artistObj.id} artistItem={artistObj} />
+            <ArtistCard key={artistObj.id} artistItem={artistObj} deleteAlbum={deleteAlbum} />
         )
     })
 

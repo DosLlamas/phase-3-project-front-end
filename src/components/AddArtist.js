@@ -6,6 +6,7 @@ function AddArtist({artistData, setArtistData}){
    const [artistNameInput, setArtistNameInput] = useState('')
    const [yearReleaseInput, setYearReleaseInput] = useState('')
    const [albumCoverImageInput, setAlbumCoverImageInput] = useState('')
+   const [listSong, setListSong] = useState('')
 
    const handleSubmit = (se) =>{
       se.preventDefault()
@@ -14,7 +15,8 @@ function AddArtist({artistData, setArtistData}){
          album_name: albumInput,
          artist_name: artistNameInput,
          release_year: yearReleaseInput,
-         album_cover: albumCoverImageInput
+         album_cover: albumCoverImageInput,
+         song_cover: listSong
       }
    
 fetch('http://localhost:9292/newalbums',{
@@ -34,6 +36,7 @@ fetch('http://localhost:9292/newalbums',{
             <input placeholder="Name Of Artist" type="text"value={artistNameInput} onChange={(se)=>setArtistNameInput(se.target.value)}/>
             <input placeholder="Year Released" type="text"value={yearReleaseInput} onChange={(se)=>setYearReleaseInput(se.target.value)}/>
             <input placeholder="Album Cover Image" type="text"value={albumCoverImageInput} onChange={(se)=>setAlbumCoverImageInput(se.target.value)}/>
+            <input placeholder="List Of Songs By Artist" type="text" value={listSong} onChange={(se)=>setListSong(se.target.value)}/>
             <button type="submit" className="button-52">Add Artist</button>
          </form>
         </div>

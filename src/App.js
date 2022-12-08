@@ -25,11 +25,17 @@ function App() {
     return (artistObj.artist_name.toLowerCase().includes(searchArtist.toLowerCase()))
     
   })
+
+
+  function handleDeleteAlbum(id){
+    const updateAlbumArray = artistData.filter(album => album.id!== id)
+    setArtistData(updateAlbumArray)
+  }
   return (
     <div className="App">
       <Header />
       <SearchBar searchArtist = {searchArtist} setSearchArtist = {setSearchArtist}/>
-      <ArtistPage selectedArtist = {filteredArtists}/>
+      <ArtistPage selectedArtist = {filteredArtists} deleteAlbum={handleDeleteAlbum}/>
       <AddArtist artistData={artistData} setArtistData={setArtistData} />
     </div>
   );
