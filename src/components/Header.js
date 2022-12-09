@@ -2,7 +2,7 @@ function Header (){
 
     return (
       
-         <h1>Matt's Music</h1>
+         <h1 class="matt">Matt's Music</h1>
 
     )
 

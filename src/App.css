@@ -1,10 +1,18 @@
 .App {
-  background-image: "https://png.pngtree.com/background/20210711/original/pngtree-purple-minimalist-music-note-banner-background-picture-image_1089759.jpg";
   text-align:center; 
   margin-left:auto; 
   margin-right:auto; 
     
   justify-content: center;
+}
+
+body {
+  /* background: url(../public/backgroundImg.jpg);
+  background-repeat: repeat-x;
+background-size: 100% 100%; */
+padding: 0;
+margin: 0;
+background: linear-gradient(to right, #C737D7, #2BE8E8)
 }
 
 /* .center {
@@ -172,7 +180,7 @@ height: 300px;
 object-fit: cover;
 backface-visibility: hidden;
 background: #ffc728;
-color: #333;
+color: rgb(0, 0, 0);
 }
 
 .backCard {
@@ -185,4 +193,17 @@ color: #333;
   color: #333;
   transform: rotateY(180deg);
   
+}
+
+::placeholder{
+  color: black;
+  font-weight: bold;
+}
+input::placeholder{
+  color: white;
+  font-weight: bold;
+}
+
+.matt {
+  color: black;
 }

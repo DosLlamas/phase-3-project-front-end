@@ -32,11 +32,11 @@ fetch('http://localhost:9292/newalbums',{
         <div>
          <h2>New Album</h2>
          <form onSubmit={handleSubmit}>
-            <input placeholder="Name Of Album" type="text"value={albumInput} onChange={(se)=>setAlbumInput(se.target.value)}/>
-            <input placeholder="Name Of Artist" type="text"value={artistNameInput} onChange={(se)=>setArtistNameInput(se.target.value)}/>
-            <input placeholder="Year Released" type="text"value={yearReleaseInput} onChange={(se)=>setYearReleaseInput(se.target.value)}/>
-            <input placeholder="Album Cover Image" type="text"value={albumCoverImageInput} onChange={(se)=>setAlbumCoverImageInput(se.target.value)}/>
-            <input placeholder="List Of Songs By Artist" type="text" value={listSong} onChange={(se)=>setListSong(se.target.value)}/>
+            <input class="submitHolder" placeholder="Name Of Album" type="text"value={albumInput} onChange={(se)=>setAlbumInput(se.target.value)}/>
+            <input class="submitHolder" placeholder="Name Of Artist" type="text"value={artistNameInput} onChange={(se)=>setArtistNameInput(se.target.value)}/>
+            <input class="submitHolder" placeholder="Year Released" type="text"value={yearReleaseInput} onChange={(se)=>setYearReleaseInput(se.target.value)}/>
+            <input class="submitHolder" placeholder="Album Cover Image" type="text"value={albumCoverImageInput} onChange={(se)=>setAlbumCoverImageInput(se.target.value)}/>
+            <input class="submitHolder" placeholder="List Of Songs By Artist" type="text" value={listSong} onChange={(se)=>setListSong(se.target.value)}/>
             <button type="submit" className="button-52">Add Artist</button>
          </form>
         </div>
